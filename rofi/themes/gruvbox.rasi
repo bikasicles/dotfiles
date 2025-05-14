@@ -1,0 +1,156 @@
+/**
+ * ROFI Color theme
+ * User: Liam
+ * Copyright: Liam Johnson !!
+*/
+
+* {
+	bgD:		#282828;
+	redD:		#CC251D;
+	greenD:		#98971A;
+	yellowD:	#A2734C;
+	blueD:		#458588;
+	purpleD:	#B16286;
+	aquaD:		#689D6A;
+	greyD:		#A89984;
+	bgL:		#3C3836;
+	redL:		#FB4934;
+	greenL:		#B8BB26;
+	yellowL:	#FABD2F;
+	blueL:		#83A598;
+	purpleL:	#D3869B;
+	aquaL:		#8EC07C;
+	greyL:		#EBDBB2;
+	tansparent:	#00000000;
+	highlight:underline bold #98971A;
+
+	padding:	0;
+	margin:		0;
+	border:		0;
+	border-radius:	0;
+	spacing:	0;
+	vertical-align: 0.5;
+
+	text-color: @greyL;
+	border-color: @greyD;
+	background-color: @bgL;
+	/* changes main background color */
+
+	font: "Inconsolata 11";
+}
+
+configuration {
+	modes: "window,drun,run,ssh";
+	icon-theme: "Gruvbox-Dark";
+	combi-modes: "window,drun,run,ssh";
+	combi-hide-mode-prefix: true;
+	show-icons: true;
+
+	display-combi: " All: ";
+	display-drun: " Apps: ";
+	display-run: " Cmd: ";
+	display-window: " Win: ";
+}
+
+window {
+	width: 25%;
+	location: center;
+	background-color: @yellowL;
+	/* this color does not seem to change anything. */
+	orientation: horizontal;
+}
+
+mainbox {
+	children: [inputbar, message, listview];
+}
+
+inputbar {
+	margin: 8px 8px 3px 8px;
+	background-color: @greyD;
+	/* changes color around search / input bar. */
+	children: [prompt, entry];
+}
+
+prompt {
+	padding: 5px;
+	margin: 2px;
+	background-color: @bgL;
+	/* changes background color around the mode text. */
+	text-color: @greenD;
+	/* changes text color of the mode text. */
+	font: "Inconsolata 13";
+}
+
+entry {
+	padding: 5px;
+	margin: 2px;
+	border-color: @greyD;
+	/* changes border color around input bar and search */
+	background-color: @bgL;
+	/* changes background color behind search bar */
+	text-color: @greenD;
+	font: "Inconsolata Bold 13";
+}
+
+listview {
+	lines: 10;
+	padding: 8px;
+	border: 2px;
+	margin: 8px;
+	background-color: @bgD;
+	/* changes background color behind the list of options (not the options themselves) */
+	children: [element];
+}
+
+element {
+	padding:2px;
+	children: [ element-icon, element-text ];
+}
+
+element-text {
+	size: 1em;
+	padding: 4px;
+	margin: 0px;
+	text-color: inherit;
+}
+
+element-icon {
+	padding: 4px;
+	margin: 1px;
+	size: 1em;
+}
+
+element selected {
+	background-color: @blueL;
+	/* changes color of element selection "border" */
+	text-color: @blueD;
+	/* changes text color of current selection */
+}
+
+element selected active {
+	background-color: @greenD;
+	/* changes color of element selection "border" on currently open window */
+}
+
+message {
+	expand: true;
+	background-color: @bgD;
+	/* does not seem to change anything. */
+	children: [textbox];
+}
+
+textbox {
+	expand: true;
+	padding: 3px;
+	background-color: @bgL;
+	/* does not seem to change anything. */
+	text-color: @greyD;
+}
+
+error-message {
+	expand: true;
+	border: 2px;
+	padding: 5px;
+	background-color: @redD;
+	text-color: @bgD;
+}
