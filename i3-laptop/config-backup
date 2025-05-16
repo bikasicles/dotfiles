@@ -245,11 +245,7 @@ exec pavucontrol
 exec firefox
 exec_always compton -f
 exec_always --no-startup-id nm-applet --sm disable
-	#Desktop display settings
 #exec_always xrandr --output DisplayPort-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --rate 170 --output HDMI-A-2 --off --output DVI-D-0 --mode 1920x1080 --pos 2560x180 --rotate normal --output DP-1-1 --off --output HDMI-1-1 --off --output HDMI-1-2 --off 
-	#Laptop HDMI display settings
-exec_always xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output DP-3 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-4 --off --output DP-5 --off
-
 
 
 # Sets Background imagey
