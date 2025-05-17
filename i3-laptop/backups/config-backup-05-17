@@ -123,7 +123,7 @@ set $ws4 "4: Notes "
 set $ws5 "5: Games " 
 set $ws6 "6: Free"
 set $ws7 "7: Free"
-set $ws8 "8: OBS "
+set $ws8 "8: Free"
 set $ws9 "9: Communicaton "
 set $ws10 "10: Music "
 
@@ -171,7 +171,6 @@ assign [class="steam"] $ws5
 assign [class="Pavucontrol"] $ws10
 assign [class="discord"] $ws9
 assign [class="Code"] $ws3
-assign [class="obs"] $ws8
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -249,7 +248,7 @@ exec_always --no-startup-id nm-applet --sm disable
 	#Desktop display settings
 #exec_always xrandr --output DisplayPort-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --rate 170 --output HDMI-A-2 --off --output DVI-D-0 --mode 1920x1080 --pos 2560x180 --rotate normal --output DP-1-1 --off --output HDMI-1-1 --off --output HDMI-1-2 --off 
 	#Laptop HDMI display settings
-#exec_always xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output DP-3 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-4 --off --output DP-5 --off
+exec_always xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output DP-3 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-4 --off --output DP-5 --off
 
 
 

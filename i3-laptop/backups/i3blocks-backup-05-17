@@ -40,7 +40,6 @@ instance=Master
 #instance=PCM
 interval=1
 #signal=10
-color=#458588
 
 # Memory usage
 #
@@ -72,7 +71,7 @@ color=#458588
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
 #instance=wlan0
-color=#B16286
+color=#B8BB26
 interval=10
 separator=false
 
@@ -101,19 +100,17 @@ separator=false
 # Battery indicator
 #
 # The battery instance defaults to 0.
-[battery]
+#[battery]
 #label=BAT
-label=⚡
+#label=⚡
 #instance=1
-interval=30
-color=#98971A
+#interval=30
 
 # Date Time
 #
 [time]
 command=date '+%m-%d-%y | %H:%M'
 interval=1
-color=#FABD2F
 
 # Generic media player support
 #
@@ -122,7 +119,7 @@ color=#FABD2F
 [mediaplayer]
 instance=spotify
 interval=5
-#signal=10
+signal=10
 
 # OpenVPN support
 #
